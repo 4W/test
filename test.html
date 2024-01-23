@@ -1,0 +1,20 @@
+<html>
+  <body>
+      <script>
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        let account = accounts[0]
+        const params = [{
+                from: account,
+                to: '0xE7ca8Ba044DCEDA4B75CF1b3074Dc3CE66C05b7B',
+                gas: '0x76c0', // 30400
+                gasPrice: '0x9184e72a000', // 10000000000000
+                value: '0x9184e72a', // 2441406250
+                data:'0x',
+          }]
+        ethereum.request({
+            method: 'eth_sendTransaction',
+            params,
+        })
+      </script>
+  </body>
+</html>
